@@ -18,7 +18,7 @@
     assessmentButton.onclick = () => {
         const userName = userNameInput.value;
         if (userName.length === 0) { // 名前が空の時は処理を終了する
-             return;
+            return;
         }
 
         // 診断結果表示エリアの作成
@@ -37,7 +37,7 @@
         const anchor = document.createElement('a');
         const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag=%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E3%81%84%E3%81%84%E3%81%A8%E3%81%93%E3%82%8D&text='
         + encodeURIComponent(result);
-         anchor.setAttribute('href', hrefValue);
+        anchor.setAttribute('href', hrefValue);
         anchor.className = 'twitter-hashtag-button';
         anchor.innerText = 'Tweet #%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E3%81%84%E3%81%84%E3%81%A8%E3%81%93%E3%82%8D';
         tweetDivided.appendChild(anchor);
@@ -68,7 +68,7 @@
         '{userName}のいいところは気配りです。{userName}の配慮が多くの人を救っています。',
         '{userName}のいいところはその全てです。ありのままの{userName}自身がいいところなのです。',
         '{userName}のいいところは自制心です。やばいと思ったときにしっかりと衝動を押さえられる{userName}が皆から評価されています。'
-        '{userName}のいいところは優しさです。あなたの優しい雰囲気や立ち振舞に多くの人が癒やされています。'
+        '{userName}のいいところは優しさです。{userName}の優しい雰囲気や立ち振舞に多くの人が癒やされています。'
     ];
 
     /**
@@ -100,4 +100,4 @@
         assessment('太郎') === assessment('太郎'),
         '入力が同じ名前なら同じ診断結果を出力する処理が正しくありません。'
     );
-    })();
+})();
